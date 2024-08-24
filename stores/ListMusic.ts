@@ -6,8 +6,8 @@ export const useListMusicStore = defineStore('list-music', {
     listMusic: []
   }),
   actions: {
-    async getListMusic () {
-      const response = await useFetch(`${this.runtimeConfig.public.API_ENDPOINT}/search?term=json+mraz`, {
+    async getListMusic (val: any) {
+      const response = await useFetch(`${this.runtimeConfig.public.API_ENDPOINT}/search?term=${val}`, {
         method: 'GET',
         headers: {
           "Content-Type": "application/json"

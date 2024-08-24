@@ -13,7 +13,7 @@
   const route = useRoute()
 
   useHead({
-    titleTemplate: '%s | Partner Area',
+    titleTemplate: '%s | Explor your music',
     meta: [
       { property: 'og:title', content: `${route.meta.title} | %s` }
     ]

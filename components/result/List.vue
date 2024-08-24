@@ -1,8 +1,6 @@
 <template>
   <div>
     <div class="p-3">
-
-      
       <Skeleton v-if="loading" />
       <div v-for="(data, index) in listMusic" :key="index" class="relative border border-surface-200 bg-white p-3 mb-4 rounded-xl">
         <div class="w-28">
@@ -33,9 +31,9 @@
       
       <NoMusic v-if="listMusic.length === 0" />
 
-      <div class="h-[100px] rounded-t-[100px] bg-blue-500">
+      <!-- <div class="h-[100px] rounded-t-[100px] bg-blue-500">
         <div class="p-5 text-center text-2xl text-white">Footer</div>
-      </div>
+      </div> -->
 
     </div>
   </div>
@@ -46,14 +44,14 @@
   import { storeToRefs } from 'pinia'
   import { useListMusicStore } from '~/stores/ListMusic'
 
+  const route = useRoute()
   const loading = ref(true)
   const store = useListMusicStore()
   const { listMusic } = storeToRefs(store)
 
-  await store.getListMusic()
+  await store.getListMusic(route.params.slug)
   loading.value = false
   console.log('Data Music ssss', listMusic.value.length)
-  
 </script>
 
 <style scoped></style>

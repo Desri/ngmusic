@@ -5,7 +5,7 @@
         <div class="flex-none w-14 text-center">
           <Button icon="pi pi-bars" @click="visibleLeft = true" />
         </div>
-        <div class="grow text-center">
+        <div class="grow text-center tracking-wider">
           ngmusic
         </div>
         <div class="flex-none w-14 text-center">
@@ -64,7 +64,7 @@
     <Dialog
       v-model:visible="visible"
       header="Edit Profile"
-      class="sm:w-96 m-0 rounded-none"
+      class="w-full sm:w-96 m-0 rounded-none"
       :position="position"
       :modal="true"
       :draggable="false"
@@ -89,8 +89,6 @@
       </div>
     </Dialog>
   </div>
-
-  
 </template>
 
 
@@ -100,11 +98,10 @@
   const position = ref('center');
   const visible = ref(false);
 
-  const openPosition = (pos) => {
+  const openPosition = (pos: string) => {
     position.value = pos;
     visible.value = true;
   }
-
 </script>
 
 <style scoped></style>
