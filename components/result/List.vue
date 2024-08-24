@@ -51,7 +51,7 @@
 
   await store.getListMusic(route.params.slug)
   loading.value = false
-  console.log('Data Music ssss', listMusic.value.length)
+  console.log('Data Music', listMusic.value.length)
 </script>
 
 <style scoped></style>

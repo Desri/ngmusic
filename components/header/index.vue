@@ -9,36 +9,36 @@
           ngmusic
         </div>
         <div class="flex-none w-14 text-center">
-          <Button icon="pi pi-search" @click="openPosition('bottom')" />
+          <Button icon="pi pi-search" @click="openPosition" />
         </div>
       </nav>
     </header>
     <HeaderMenu />
     <Dialog
       v-model:visible="visible"
-      header="Search Music"
       class="w-full sm:w-96 m-0 rounded-none"
-      :position="position"
       :modal="true"
       :draggable="false"
       :pt="{
         root: {
-          class: 'h-full'
+          class: 'h-full bg-[#323242c9] min-h-full'
         },
+        header: {
+          class: 'rounded-none bg-transparent block pt-3 pr-3.5'
+        },
+        content: {
+          class: 'rounded-none bg-transparent top-1/3 absolute w-full'
+        },
+        closeButton: {
+          class: 'text-white'
+        }
       }"
     >
-      <span class="p-text-secondary block mb-5">Update your information.</span>
-      <div class="flex align-items-center gap-3 mb-3">
-        <label for="username" class="font-semibold w-6rem">Username</label>
-        <InputText id="username" class="flex-auto" autocomplete="off" />
-      </div>
-      <div class="flex align-items-center gap-3 mb-5">
-        <label for="email" class="font-semibold w-6rem">Email</label>
-        <InputText id="email" class="flex-auto" autocomplete="off" />
-      </div>
-      <div class="flex justify-content-end gap-2">
-        <Button type="button" label="Cancel" severity="secondary" @click="visible = false"></Button>
-        <Button type="button" label="Save" @click="visible = false"></Button>
+      <div>
+        <h2 class="text-center text-white mb-4 text-lg">
+          Search
+        </h2>
+        <FormSearch />
       </div>
     </Dialog>
   </div>
@@ -47,11 +47,9 @@
 <script setup lang="ts">
   import { ref } from "vue";
   const store = useGlobalStore()
-  const position = ref('center');
   const visible = ref(false);
 
-  const openPosition = (pos: string) => {
-    position.value = pos;
+  const openPosition = () => {
     visible.value = true;
   }
 
@@ -60,4 +58,8 @@
   }
 </script>
 
-<style scoped></style>
+<style>
+  .p-dialog-header-icons {
+    float: right;
+  }
+</style>
