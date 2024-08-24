@@ -9,9 +9,9 @@
         <div class="absolute inset-x-0 top-0 ml-32 pl-2 py-3 h-full">
           <div class="relative h-full">
             <div class="w-4/5">
-              <label class="text-xs text-[#4f5a6d]">
+              <div class="text-xs text-[#4f5a6d]">
                 {{ data.artistName }}
-              </label><br />
+              </div><br />
               <p class="font-bold leading-[14px] text-[#4f5a6d] text-[13px]">{{ data.trackCensoredName }}</p>
             </div>
             <div class="absolute left-0 right-3 bottom-0">
