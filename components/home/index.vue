@@ -8,7 +8,7 @@
         </h1>
       </div>
       <div class="absolute inset-x-0 bottom-8 mx-auto w-10/12 mt-5">
-        <HomeFormSearch />
+        <FormSearch />
       </div>
     </div>
   </div>

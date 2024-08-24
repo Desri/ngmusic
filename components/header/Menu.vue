@@ -69,8 +69,7 @@
         },
         {
           label: 'Messages',
-          icon: 'pi pi-inbox',
-          badge: 2
+          icon: 'pi pi-inbox'
         },
         {
           label: 'Logout',

@@ -27,6 +27,7 @@
   import { useRouter } from 'vue-router'
   
   const router = useRouter()
+  const store = useGlobalStore()
   const isShow = ref(false);
   const isShowLoading = ref(false);
   const searchMusic = ref('');
@@ -38,6 +39,7 @@
       isShowLoading.value = true
       router.push({ path: `/result/${searchMusic.value}` })
       isShow.value = false
+      store.isShowModalSearch(false)
     }
   }
 </script>

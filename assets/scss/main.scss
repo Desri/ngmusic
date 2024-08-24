@@ -12,48 +12,6 @@ a:focus-visible {
 }
 
 /*============================================
-                COLORS TEXT
-=============================================*/
-.text{
-  &-grey {
-    color: $grey !important;
-  }
-  &-smooth-grey {
-    color: $smooth-grey;
-  }
-  &-dark-grey {
-    color: $dark-grey;
-  }
-  &-yellow {
-    color: $yellow !important;
-  }
-  &-red-moments {
-    color: $red-moments !important;
-  }
-  &-smooth-white {
-    color: $smooth-white;
-  }
-  &-smooth-green {
-    color: $smooth-green;
-  }
-}
-
-/*============================================
-            BACKGROUND COLORS
-=============================================*/
-.bg{
-  &-smooth-grey {
-    background: $smooth-grey !important;
-  }
-  &-red-moments {
-    background: $red-moments !important;
-  }
-  &-primary-grey {
-    background: $primary-grey !important;
-  }
-}
-
-/*============================================
                   BOX SHADOW
 =============================================*/
 .box-shadow{
@@ -89,12 +47,4 @@ a:focus-visible {
 }
 .font-thin-italic {
   font-family: 'Roboto-ThinItalic', sans-serif;
-}
-
-.bg-love {
-  background-color: rgba(35, 31, 32, 0.3);
-}
-
-.shadow-primary {
-  box-shadow: var(--NN200, #D6DFEB) 0px 1px 6px 0px;
 }
