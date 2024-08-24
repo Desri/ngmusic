@@ -9,10 +9,10 @@
         <div class="absolute inset-x-0 top-0 ml-32 pl-2 py-3 h-full">
           <div class="relative h-full">
             <div class="w-4/5">
-              <div class="text-xs text-[#4f5a6d]">
+              <div class="text-xs text-[#4f5a6d] mb-2">
                 {{ data.artistName }}
-              </div><br />
-              <p class="font-bold leading-[14px] text-[#4f5a6d] text-[13px]">{{ data.trackCensoredName }}</p>
+              </div>
+              <p class="font-bold leading-[14px] text-[#4f5a6d] text-[13px] max-h-11 overflow-hidden text-ellipsis truncate-content">{{ data.trackCensoredName }}</p>
             </div>
             <div class="absolute left-0 right-3 bottom-0">
               <div class="flex justify-between items-center">
@@ -54,4 +54,10 @@
   console.log('Data Music', listMusic.value.length)
 </script>
 
-<style scoped></style>
+<style scoped>
+  .truncate-content {
+    display: -webkit-box !important;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+  }
+</style>
