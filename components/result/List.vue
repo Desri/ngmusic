@@ -1,14 +1,11 @@
 <template>
   <div>
     <div class="p-3">
-      <div class="text-center my-8">
+      <div class="text-center mt-5 my-8">
         <h2 class="text-[#4f5a6d]">
           Search result for: <span class="font-bold text-ngmusic tracking-wider">{{ route.params.slug }}</span>
         </h2>
       </div>
-      <!-- <div class="h-[100px] rounded-t-[100px] bg-blue-500">
-        <div class="p-5 text-center text-2xl text-white">Footer</div>
-      </div> -->
       <Skeleton v-if="loading" />
       <div v-for="(data, index) in listMusic" :key="index" class="relative border border-surface-200 bg-white p-3 mb-4 rounded-xl">
         <div class="w-28">
@@ -17,7 +14,7 @@
         <div class="absolute inset-x-0 top-0 ml-32 pl-2 py-3 h-full">
           <div class="relative h-full">
             <div class="w-4/5">
-              <div class="text-xs text-[#4f5a6d] mb-2">
+              <div class="text-xs text-[#4f5a6d] mb-2 max-h-11 overflow-hidden text-ellipsis truncate-content truncate-label">
                 {{ data.artistName }}
               </div>
               <p class="font-bold leading-[14px] text-[#4f5a6d] text-[13px] max-h-11 overflow-hidden text-ellipsis truncate-content">{{ data.trackCensoredName }}</p>
@@ -26,7 +23,7 @@
               <div class="flex justify-between items-center">
                 <Tag severity="success" :value="data.primaryGenreName" class="text-xs rounded-xl px-3.5 py-0.5 text-white bg-green-primary font-normal"></Tag>
                 <span class="flex items-center gap-1 font-medium text-sm text-yellow-primary">
-                  <div class="border-2 rounded-full border-yellow-primary border-solid w-6 h-6 text-center">
+                  <div v-if="data.trackPrice" class="border-2 rounded-full border-yellow-primary border-solid w-6 h-6 text-center">
                     <i class="pi pi-dollar text-xs relative top-px"></i>
                   </div>
                    {{ data.trackPrice }}
@@ -60,6 +57,11 @@
   .truncate-content {
     display: -webkit-box !important;
     -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+  }
+  .truncate-label {
+    display: -webkit-box !important;
+    -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
   }
 </style>
