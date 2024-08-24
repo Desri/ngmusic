@@ -3,7 +3,7 @@
     <Sidebar
       v-model:visible="showSidebar"
       position="left"
-      class="bg-[#efefef]"
+      class="w-72 bg-[#efefef]"
       :pt="{
         header: {
           class: 'bg-white mb-2 py-[15px]'
