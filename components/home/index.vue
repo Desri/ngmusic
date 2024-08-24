@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="bg-ngmusic absolute h-full sm:w-96 mx-auto p-7 text-center">
+    <div class="w-full sm:w-96 bg-ngmusic absolute h-full sm:w-96 mx-auto p-7 text-center">
       <div class="absolute inset-x-0 top-1/3">
         <img class="mb-3 mx-auto w-20" src="@/assets/img/musical-note.png" />
         <h1 class="text-white tracking-wider">
