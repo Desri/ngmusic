@@ -7,7 +7,7 @@
       :draggable="false"
       :pt="{
         root: {
-          class: 'h-full bg-[#323242c9] min-h-full'
+          class: 'h-full bg-opacity min-h-full'
         },
         header: {
           class: 'rounded-none bg-transparent block pt-3 pr-3.5'
