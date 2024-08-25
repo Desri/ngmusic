@@ -9,7 +9,7 @@ export const useListMusicStore = defineStore('list-music', {
 
     getListMusic (val: any) {
       return new Promise((resolve, reject) => {
-        $fetch(`${this.runtimeConfig.public.API_ENDPOINT}/search?term=${val.replace(/ /g, '+')}`, {
+        $fetch(`${this.runtimeConfig.public.API_ENDPOINT}/search?term=${val.replace(/ /g, '+')}&limit=35`, {
           method: 'GET',
           headers: {
             "Content-Type": "application/json"

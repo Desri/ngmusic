@@ -51,12 +51,11 @@
   const { listMusic } = storeToRefs(store)
 
   onMounted(async () => {
-    await store.getListMusic(route.params.slug).then((res: any) => {
-      if(res) {
-        loading.value = false
-      }
-    }).catch((err: string) => {
+    store.getListMusic(route.params.slug).then((res: any) => {})
+    .catch((err: string) => {
       console.log('error', err)
+    }).finally(() => {
+      loading.value = false
     })
   });
 </script>
