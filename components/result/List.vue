@@ -21,7 +21,12 @@
             </div>
             <div class="absolute left-0 right-3 bottom-0">
               <div class="flex justify-between items-center">
-                <Tag severity="success" :value="data.primaryGenreName" class="text-xs rounded-xl px-3.5 py-0.5 text-white bg-green-primary font-normal"></Tag>
+                <!-- <Tag severity="success" :value="data.primaryGenreName" class="text-xs rounded-xl px-3.5 py-0.5 text-white bg-green-primary font-normal line-clamp-1 w-[60px] truncate ..."></Tag> -->
+                <div class="bg-green-primary rounded-xl text-center py-1 w-[95px]">
+                  <p class="text-xs text-white font-normal mx-auto max-w-[60px] truncate ...">
+                    {{ data.primaryGenreName }}
+                  </p>
+                </div>
                 <span class="flex items-center gap-1 font-medium text-sm text-yellow-primary">
                   <div v-if="data.trackPrice" class="border-2 rounded-full border-yellow-primary border-solid w-6 h-6 text-center">
                     <i class="pi pi-dollar text-xs relative top-px"></i>

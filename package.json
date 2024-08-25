@@ -16,6 +16,7 @@
     "@unhead/vue": "^1.9.4",
     "@vueuse/core": "^10.9.0",
     "nuxt": "^3.10.3",
+    "nuxt-lazy-load": "^3.0.4",
     "pinia": "^2.1.7",
     "primeicons": "^7.0.0",
     "primevue": "^3.52.0",

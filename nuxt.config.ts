@@ -25,8 +25,25 @@ export default defineNuxtConfig({
     '@nuxt/image',
     '@pinia/nuxt',
     '@nuxt/eslint',
-    'nuxt-primevue'
+    'nuxt-primevue',
+    'nuxt-lazy-load'
   ],
+  lazyLoad: {
+    images: true,
+    directiveOnly: false,
+    
+    // Default image must be in the public folder
+    defaultImage: '/no-image.jpg',
+  
+    // To remove class set value to false
+    loadingClass: 'isLoading',
+    loadedClass: 'isLoaded',
+    appendClass: 'lazyLoad',
+    
+    observerConfig: {
+      // See IntersectionObserver documentation
+    }
+  },
   primevue: {
     usePrimeVue: true
   },
