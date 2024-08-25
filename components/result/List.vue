@@ -52,13 +52,15 @@
   const store = useListMusicStore()
   const { listMusic } = storeToRefs(store)
 
-  await store.getListMusic(route.params.slug).then((res: any) => {
-    if(res) {
-      loading.value = false
-    }
-  }).catch((err: string) => {
-    console.log('error', err)
-  })
+  onMounted(async () => {
+    await store.getListMusic(route.params.slug).then((res: any) => {
+      if(res) {
+        loading.value = false
+      }
+    }).catch((err: string) => {
+      console.log('error', err)
+    })
+  });
 </script>
 
 <style scoped>
