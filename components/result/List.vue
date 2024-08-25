@@ -6,7 +6,7 @@
           Search result for: <span class="font-bold text-ngmusic tracking-wider">{{ route.params.slug }}</span>
         </h2>
       </div>
-      <Skeleton v-if="loading" />
+      <LazySkeleton v-if="loading" />
       <div v-for="(data, index) in listMusic" :key="index" class="relative border border-surface-200 bg-white p-3 mb-4 rounded-xl">
         <div class="w-28">
           <img class="rounded-xl w-full" :src="data.artworkUrl100" />
@@ -31,7 +31,7 @@
                   <div v-if="data.trackPrice" class="border-2 rounded-full border-yellow-primary border-solid w-6 h-6 text-center">
                     <i class="pi pi-dollar text-xs relative top-px"></i>
                   </div>
-                   {{ data.trackPrice }}
+                  {{ data.trackPrice }}
                 </span>
               </div>
             </div>
@@ -53,9 +53,13 @@
   const store = useListMusicStore()
   const { listMusic } = storeToRefs(store)
 
-  await store.getListMusic(route.params.slug)
-  loading.value = false
-  console.log('Data Music', listMusic.value.length)
+  await store.getListMusic(route.params.slug).then((res: any) => {
+    if(res.length > 0) {
+      loading.value = false
+    }
+  }).catch((err: string) => {
+    console.log('error', err)
+  })
 </script>
 
 <style scoped>
