@@ -21,7 +21,6 @@
             </div>
             <div class="absolute left-0 right-3 bottom-0">
               <div class="flex justify-between items-center">
-                <!-- <Tag severity="success" :value="data.primaryGenreName" class="text-xs rounded-xl px-3.5 py-0.5 text-white bg-green-primary font-normal line-clamp-1 w-[60px] truncate ..."></Tag> -->
                 <div class="bg-green-primary rounded-xl text-center py-1 w-[95px]">
                   <p class="text-xs text-white font-normal mx-auto max-w-[60px] truncate ...">
                     {{ data.primaryGenreName }}
@@ -54,7 +53,7 @@
   const { listMusic } = storeToRefs(store)
 
   await store.getListMusic(route.params.slug).then((res: any) => {
-    if(res.length > 0) {
+    if(res) {
       loading.value = false
     }
   }).catch((err: string) => {
