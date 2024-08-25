@@ -13,7 +13,8 @@
       </p>
     </div>
     <Button
-      class="bg-[#b077ed] rounded-3xl py-2 px-4 w-full text-center block text-white"
+      class="rounded-3xl py-2 px-4 w-full text-center block text-white"
+      :class="route.path === '/' ? 'bg-button-rgba' : 'bg-gradient-button'"
       :disabled="isShowLoading"
       @click="submitSearch"
     >
@@ -27,6 +28,7 @@
   import { useRouter } from 'vue-router'
   
   const router = useRouter()
+  const route = useRoute()
   const store = useGlobalStore()
   const isShow = ref(false);
   const isShowLoading = ref(false);
@@ -45,6 +47,12 @@
 </script>
 
 <style scoped>
+  input::placeholder {
+    font-size: 14px;
+    font-weight: 500;
+    color: #64748b;
+    letter-spacing: 0.43px;
+  }
   .dots::after {
     content: '';
     display: inline-block;

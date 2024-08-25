@@ -7,7 +7,8 @@ export default {
         "ngmusic": "#904ae4",
         "danger": "#e10000",
         "green-primary": "#0fb980",
-        "yellow-primary": "#f8ca62"
+        "yellow-primary": "#f8ca62",
+        "button-rgba": "rgba(255, 255, 255, 0.2)",
       }
     },
   },
