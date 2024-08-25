@@ -8,7 +8,7 @@ export default defineNuxtConfig({
       meta: [
         {
           name: 'description',
-          content: 'popular music'
+          content: 'Explore your popular music'
         }
       ],
       link: [
