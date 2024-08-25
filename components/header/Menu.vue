@@ -31,7 +31,7 @@
           </template>
         </Menu>
       </div>
-      <div class="bg-ngmusic absolute bottom-0 left-0 right-0 w-full py-3 cursor-pointer">
+      <div class="bg-gradient absolute bottom-0 left-0 right-0 w-full py-3 cursor-pointer">
         <h2 class="text-sm text-center text-white">ngmusic © 2024. All Rights Reserved.</h2>
       </div>
     </Sidebar>

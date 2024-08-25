@@ -7,7 +7,7 @@
         </h2>
       </div>
       <LazySkeleton v-if="loading" />
-      <div v-for="(data, index) in listMusic" :key="index" class="relative border border-surface-200 bg-white p-3 mb-4 rounded-xl">
+      <div v-for="(data, index) in listMusic" :key="index" class="relative shadow bg-white p-3 mb-4 rounded-xl">
         <div class="w-28">
           <img class="rounded-xl w-full" :src="data.artworkUrl100" />
         </div>
@@ -71,5 +71,8 @@
     display: -webkit-box !important;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
+  }
+  .shadow {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
   }
 </style>
