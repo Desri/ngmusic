@@ -14,22 +14,20 @@
         <div class="absolute inset-x-0 top-0 ml-32 pl-2 py-3 h-full">
           <div class="relative h-full">
             <div class="w-4/5">
-              <div class="text-xs text-[#4f5a6d] mb-2 max-h-11 overflow-hidden text-ellipsis truncate-content truncate-label">
+              <div class="text-xs text-[#334155] mb-2 max-h-11 overflow-hidden text-ellipsis truncate-content truncate-label">
                 {{ data.artistName }}
               </div>
-              <p class="font-bold leading-[14px] text-[#4f5a6d] text-[13px] max-h-11 overflow-hidden text-ellipsis truncate-content">{{ data.trackCensoredName }}</p>
+              <p class="font-bold leading-[14px] text-[#334155] text-[13px] max-h-11 overflow-hidden text-ellipsis truncate-content">{{ data.trackCensoredName }}</p>
             </div>
             <div class="absolute left-0 right-3 bottom-0">
               <div class="flex justify-between items-center">
-                <div class="bg-green-primary rounded-xl text-center py-1 w-[95px]">
-                  <p class="text-xs text-white font-normal mx-auto max-w-[60px] truncate ...">
+                <div class="bg-green-primary rounded-xl text-center px-2 py-1 w-auto">
+                  <p class="text-xs text-white font-normal mx-auto max-w-[55px] truncate ...">
                     {{ data.primaryGenreName }}
                   </p>
                 </div>
-                <span class="flex items-center gap-1 font-medium text-sm text-yellow-primary">
-                  <div v-if="data.trackPrice" class="border-2 rounded-full border-yellow-primary border-solid w-6 h-6 text-center">
-                    <i class="pi pi-dollar text-xs relative top-px"></i>
-                  </div>
+                <span v-if="data.trackPrice" class="flex items-center gap-1 font-medium text-sm text-yellow-primary">
+                  <img class="rounded-xl w-full" src="/currency-dollar.png" />
                   {{ data.trackPrice }}
                 </span>
               </div>

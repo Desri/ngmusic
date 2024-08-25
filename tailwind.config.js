@@ -4,10 +4,10 @@ export default {
   theme: {
     extend: {
       colors: {
-        "ngmusic": "#904ae4",
+        "ngmusic": "#7b34dd",
         "danger": "#e10000",
-        "green-primary": "#0fb980",
-        "yellow-primary": "#f8ca62",
+        "green-primary": "#10b981",
+        "yellow-primary": "#f5b014",
         "button-rgba": "rgba(255, 255, 255, 0.2)",
       }
     },
