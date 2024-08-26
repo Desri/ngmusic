@@ -36,19 +36,18 @@
   const searchMusic = ref('');
 
   const update = debounce(() => {
+    router.push({ path: `/result/${searchMusic.value}` })
+    isShow.value = false
+    store.isShowModalSearch(false)
+  }, 5000)
+
+  const submitSearch = () => {
     if(searchMusic.value === '') {
       isShow.value = true
     } else {
       isShowLoading.value = true
-      router.push({ path: `/result/${searchMusic.value}` })
-      isShow.value = false
-      store.isShowModalSearch(false)
+      update()
     }
-  }, 5000)
-
-  const submitSearch = () => {
-    isShowLoading.value = true
-    update()
   }
 </script>
 
