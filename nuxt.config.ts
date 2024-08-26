@@ -65,5 +65,8 @@ export default defineNuxtConfig({
   ],
   image: {
     dir: 'assets/img'
+  },
+  build: {
+    transpile: ['lodash-es'],
   }
 })

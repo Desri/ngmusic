@@ -25,6 +25,7 @@
 
 <script setup lang="ts">
   import { ref } from 'vue';
+  import debounce from 'debounce';
   import { useRouter } from 'vue-router'
   
   const router = useRouter()
@@ -34,7 +35,7 @@
   const isShowLoading = ref(false);
   const searchMusic = ref('');
 
-  const submitSearch = () => {
+  const update = debounce(() => {
     if(searchMusic.value === '') {
       isShow.value = true
     } else {
@@ -43,6 +44,11 @@
       isShow.value = false
       store.isShowModalSearch(false)
     }
+  }, 5000)
+
+  const submitSearch = () => {
+    isShowLoading.value = true
+    update()
   }
 </script>
 
